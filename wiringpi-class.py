@@ -11,7 +11,8 @@ class Pin(object):
   PWM_RANGE = 255
 #  PWM_List = [0]*64
   def __init__(self,PinID=0,PinMode=0):
-    if PinID == "D1" : Pin = 1
+    if PinID == "D0" : Pin = 0
+    elif PinID == "D1" : Pin = 1
     elif PinID == "D2" : Pin = 2
     elif PinID == "D3" : Pin = 3
     elif PinID == "D4" : Pin = 4
@@ -19,8 +20,6 @@ class Pin(object):
     elif PinID == "D6" : Pin = 6
     elif PinID == "D7" : Pin = 7
     elif PinID == "D8" : Pin = 8
-    elif PinID == "D9" : Pin = 9
-    elif PinID == "D10" : Pin = 10
     else : Pin=PinID
     wiringPiSetup()
     self.pin = Pin
@@ -31,10 +30,10 @@ class Pin(object):
       softPwmCreate(self.pin,0,self.PWM_RANGE)
       PWM_List[self.pin] = 1   # Mark that pin and initialize it to PWM
     elif self.Mode == self.ANALOG :
-      if self.pin == "A0" :
+      if self.pin == "A0" or self.pin == "a0" :
+        self.ADC_Pin = 17
+      elif self.pin == "A1" or self.pin == "a1" :
         self.ADC_Pin = 18
-      elif self.pin == "A1" :
-        self.ADC_Pin = 19
     else :
       pinMode(self.pin, self.Mode)
   def __del__(self):
