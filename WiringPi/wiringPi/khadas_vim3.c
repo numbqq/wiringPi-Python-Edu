@@ -30,15 +30,15 @@
 
 static const int pinToGpio_rev[64] = {
 	//wiringPi number to native gpio number
-	 -1,506,		//   0 | 1  :					  			| GPIOAO_10
-	433,434,		//   2 | 3  :					    GPIOH_6 | GPIOH_7
-	497,496,		//	 4 | 5  :					   GPIOAO_1 | GPIOAO_0
-	475,474,		//	 6 | 7  :					   GPIOA_15 | GPIOA_14
-	498,499,		// 	 8 | 9  :					   GPIOAO_2 | GPIOAO_3
-	461,460,		//  10 | 11 :						GPIOA_1 | GPIOA_0
-	463,462,		//	12 | 13 :						GPIOA_3 | GPIOA_2
-	464,432,		// 	14 | 15 :						GPIOA_4 | GPIOH_5
-	431,426,		// 	16 | 17 :					    GPIOH_4 | GPIOZ_15
+	506,		    //   0 | 1  :					  GPIOAO_10
+	461,460,		//   2 | 3  :					    GPIOH_6 | GPIOH_7
+	463,462,		//	 4 | 5  :					   GPIOAO_1 | GPIOAO_0
+	464,432,		//	 6 | 7  :					   GPIOA_15 | GPIOA_14
+	431,426,		// 	 8 | 9  :					   GPIOAO_2 | GPIOAO_3
+	475,474,		//  10 | 11 :						GPIOA_1 | GPIOA_0
+	498,499,		//	12 | 13 :						GPIOA_3 | GPIOA_2
+	433,434,		// 	14 | 15 :						GPIOA_4 | GPIOH_5
+	497,496,		// 	16 | 17 :					    GPIOH_4 | GPIOZ_15
 	 -1, -1,		//	18 | 19 :								|
 	 -1, -1,		//	20 | 21 :								| 
 	 -1, -1,		// 	22 | 23 :					            |
@@ -46,6 +46,7 @@ static const int pinToGpio_rev[64] = {
 	 -1, -1,		//	26 | 27 :								|
 	 -1, -1,		//	28 | 29 :					  		    |
 	 -1, -1,		//	30 | 31 : 						        |
+	 -1,
 	// Padding:
 	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //32to47
 	-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //48to63
