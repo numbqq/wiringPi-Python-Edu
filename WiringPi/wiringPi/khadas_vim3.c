@@ -34,7 +34,7 @@ static const int pinToGpio_rev[64] = {
 	461,460,		//   2 | 3  :					    GPIOH_6 | GPIOH_7
 	463,462,		//	 4 | 5  :					   GPIOAO_1 | GPIOAO_0
 	464,432,		//	 6 | 7  :					   GPIOA_15 | GPIOA_14
-	431,426,		// 	 8 | 9  :					   GPIOAO_2 | GPIOAO_3
+	431, -1,		// 	 8 | 9  :					   GPIOAO_2 | GPIOAO_3
 	475,474,		//  10 | 11 :						GPIOA_1 | GPIOA_0
 	498,499,		//	12 | 13 :						GPIOA_3 | GPIOA_2
 	433,434,		// 	14 | 15 :						GPIOA_4 | GPIOH_5
@@ -74,7 +74,7 @@ static const int phyToGpio_rev[64] = {
 	434, -1,			//	16 | 36 :	  (GPIOH_7)UART_TX_AO_B | RTC_CLK
 	 -1,431,			//	17 | 37 :						GND	| GPIOH_4
 	497, -1,			//	18 | 38 :		 (GPIOAO_1)Linux_RX	| MCUFA_1
-	496,426,			//	19 | 39 :		 (GPIOAO_0)Linux_TX | GPIOZ_15
+	496, -1,			//	19 | 39 :		 (GPIOAO_0)Linux_TX | GPIOZ_15
 	 -1, -1,			//	20 | 40 :					   3.3V	| GND
 	 //Not used
 	 -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,

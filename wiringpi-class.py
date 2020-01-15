@@ -19,7 +19,7 @@ class Pin(object):
     elif PinID == "D5" : Pin = 5
     elif PinID == "D6" : Pin = 6
     elif PinID == "D7" : Pin = 7
-    elif PinID == "D8" : Pin = 8
+#    elif PinID == "D8" : Pin = 8
     else : Pin=PinID
     wiringPiSetup()
     self.pin = Pin
