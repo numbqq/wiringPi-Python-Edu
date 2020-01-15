@@ -42,8 +42,8 @@ class Pin(object):
     if 1 == PWM_List[self.pin] :
       softPwmStop(self.pin)
     digitalWrite(self.pin,level)
-  def read_digital(self,level):
-    return digitalRead(self.pin,level)
+  def read_digital(self):
+    return digitalRead(self.pin)
   def write_analog(self,value=128):
     return softPwmWrite(self.pin,value)
   def read_analog(self):
