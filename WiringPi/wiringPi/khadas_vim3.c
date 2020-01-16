@@ -576,8 +576,8 @@ static int _analogRead (int UNU pin)
 	if (lib->mode == MODE_GPIO_SYS)
 		return -1;
 	switch (pin) {
-		case 18: pin = 0; break;
-		case 19: pin = 1; break;
+		case 17: pin = 0; break;
+		case 18: pin = 1; break;
 		default: return 0;
 	}
 	if (adcFds [pin] == -1)

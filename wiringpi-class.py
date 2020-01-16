@@ -37,7 +37,8 @@ class Pin(object):
     else :
       pinMode(self.pin, self.Mode)
   def __del__(self):
-    PWM_List[self.pin] = 0
+    self.Mode != self.ANALOG :
+      PWM_List[self.pin] = 0
   def write_digital(self,level):
     if 1 == PWM_List[self.pin] :
       softPwmStop(self.pin)
