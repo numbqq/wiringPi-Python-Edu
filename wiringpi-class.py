@@ -37,7 +37,7 @@ class Pin(object):
     else :
       pinMode(self.pin, self.Mode)
   def __del__(self):
-    self.Mode != self.ANALOG :
+    if self.Mode != self.ANALOG :
       PWM_List[self.pin] = 0
   def write_digital(self,level):
     if 1 == PWM_List[self.pin] :
