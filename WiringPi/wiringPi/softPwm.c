@@ -66,7 +66,7 @@ static volatile int newPin = -1 ;
 
 static void *softPwmThread (void *arg)
 {
-  int pin, mark, space ;
+  int pin, mark, space,pulse_time ;
   struct sched_param param ;
 
   param.sched_priority = sched_get_priority_max (SCHED_RR) ;
@@ -80,6 +80,11 @@ static void *softPwmThread (void *arg)
 
   piHiPri (90) ;
 
+  if(360 == range[pin]){
+  	pulse_time = 55;
+  }else{
+  	pulse_time = 4;
+  }
   for (;;)
   {
     mark  = marks [pin] ;
@@ -87,11 +92,11 @@ static void *softPwmThread (void *arg)
 
     if (mark != 0)
       digitalWrite (pin, HIGH) ;
-    delayMicroseconds (mark * 100) ;
+    delayMicroseconds (mark * pulse_time) ;
 
     if (space != 0)
       digitalWrite (pin, LOW) ;
-    delayMicroseconds (space * 100) ;
+    delayMicroseconds (space * pulse_time) ;
   }
 
   return NULL ;

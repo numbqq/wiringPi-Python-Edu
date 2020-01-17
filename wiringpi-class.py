@@ -70,7 +70,7 @@ class SerialMgt(object):
     return self.serial_id.readline()
 
 class Servo(object):
-  PWM_RANGE = 180
+  PWM_RANGE = 360
   PWM = 1
   def __init__(self,PinID):
     wiringPiSetup()
@@ -79,6 +79,7 @@ class Servo(object):
   def __del__(self):
     PWM_List[self.pin] = 0 
   def write_angle(self,value):
+    value = int(value*0.2+9)
     return softPwmWrite(self.pin,value)
 
 class LED(object):
