@@ -163,9 +163,9 @@ static int physToWpi_vim3 [64] =
   -1, -1,
   -1, -1,
   -1,  1,
-  17,  2,
+  18,  2,
   -1,  3,
-  18,  4,
+  19,  4,
    0,  5,       // 25, 26
   -1, -1,	// Actually I2C, but not used
   13,  6,
@@ -288,7 +288,7 @@ static const char *physNamesKhadasVim3[64] = {
 	"    ADC0","PIN.A0  ",
 	"     1V8","PIN.A3  ",
 	"    ADC1","PIN.A2  ",
-	"  PIN.H5","PIN.A4  ",
+	"PIN.AO10","PIN.A4  ",
 	"    GND3","GND     ",
 	"  PIN.H6","PWM-F   ",
 	"  PIN.H7","RTC     ",
